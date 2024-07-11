@@ -12,7 +12,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Space Mono", monospace;
+  --default-font: "Public Sans", sans-serif;
   --heading-font: "Space Grotesk", sans-serif;
   --nav-font: "Space Grotesk", sans-serif;
 }
@@ -41,7 +41,7 @@
   --heading-color: #303A2B;
 
   /* Accent Color - This is the main accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out. */
-  --accent-color: #D8FF33;
+  --accent-color: #303a2b;
 
   /* Contrast Color - This is a color used for text when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors. */
   --contrast-color: #EDEDED;
@@ -50,10 +50,10 @@
 /* Nav Menu Colors */
 :root {
   /* Nav Color - This is the default color of the main navmenu links. */
-  --nav-color: #EDEDED;
+  --nav-color: #303a2b;
 
   /* Nav Hover Color - This color is applied to main navmenu links when they are hovered over. */
-  --nav-hover-color: #d8ff33;
+  --nav-hover-color: #8b8b8b;
 
   /* Nav Dropdown Background Color - This color is used as the background for dropdown boxes that appear when hovering over primary navigation items. */
   --nav-dropdown-background-color: #ededed;
@@ -100,14 +100,16 @@ h6 {
   font-family: var(--heading-font);
 }
 
+
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
+  color: var(--contrast-color);
   transition: all 0.5s;
   z-index: 997;
-  background-color: #303A2B;
+  background-color: var(--contrast-color);
 }
 
 .header .topbar {
@@ -447,6 +449,10 @@ h6 {
   color: #ededed;
 }
 
+#title{
+  padding-left: 10px;
+}
+
 .footer .footer-newsletter .newsletter-form {
   margin-top: 30px;
   padding: 6px 8px;
@@ -468,12 +474,13 @@ h6 {
   padding: 4px;
   width: 100%;
   background-color: var(--contrast-color);
-  color: var(--default-color);
+  color: var(--contrast-color);
 }
 
 .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
   outline: none;
 }
+
 
 .footer .footer-newsletter .newsletter-form input[type=submit] {
   border: 1px;
@@ -481,15 +488,15 @@ h6 {
   font-size: 16px;
   padding: 0 20px;
   margin: -7px -8px -7px 0;
-  background: var(--contrast-color);
-  color: var(--default-color);
+  background: var(--default-color);
+  color: var(--contrast-color);
   transition: 0.3s;
   border-radius: 0 20px 20px 0;
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: color-mix(in srgb, var(--default-color), transparent 0%);
-  color: #EDEDED;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--accent-color);
 }
 
 .footer .footer-newsletter .error-message {
@@ -612,10 +619,33 @@ h6 {
 }
 
 .footer .footer-about a {
-  color: var(--heading-color);
+  color: var(--background-color);
   font-size: 24px;
   font-weight: 600;
   font-family: var(--heading-font);
+}
+
+.btn-get-started2 {
+  margin-top: 40px;
+  border: 2px solid #ededed;
+  color: var(--background-color);
+  border-color: var(--background-color);
+  /* background: var(--accent-color); */
+  font-family: var(--heading-font);
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 60px;
+  transition: 0.5s;
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--accent-color), transparent 100%);
+}
+
+.btn-get-started2:hover {
+  color: var(--default-color);
+  background: color-mix(in srgb, var(--background-color), transparent 0%);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--contrast-color), transparent 100%);
 }
 
 .footer .footer-contact p {
@@ -625,7 +655,7 @@ h6 {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--background-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -733,12 +763,12 @@ h6 {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--accent-color);
+  color: var(--contrast-color);
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 50%);
   color: var(--contrast-color);
 }
 
@@ -859,7 +889,7 @@ section,
   padding: 60px 0;
   display: flex;
   align-items: center;
-  background: url("../img/Hero\ 2\ flechas.jpg") top left;
+  background: url("../img/Hero-final.jpeg") top left;
   background-position: center;
   background-size: cover;
 }
@@ -892,16 +922,16 @@ section,
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 5px 0 30px 0;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 28px;
 }
 
 .hero .btn-get-started {
-  border: 2px solid #303A2B;
-  color: var(--default-color);
+  /* border: 2px solid #303A2B; */
+  color: var(--background-color);
   border-color: var(--default-color);
-  /* background: var(--accent-color); */
+  background: var(--default-color);
   font-family: var(--heading-font);
   font-weight: 800;
   font-size: 16px;
@@ -914,8 +944,8 @@ section,
 }
 
 .hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--default-color), transparent 0%);
+  color: var(--default-color);
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--contrast-color), transparent 55%);
 }
 
@@ -979,29 +1009,37 @@ section,
 # Featured Services Section
 --------------------------------------------------------------*/
 .featured-services .service-item {
-  box-shadow: 0px 0 25px 0 color-mix(in srgb, var(--default-color), transparent 90%);
   background-color: #EDEDED;
   padding: 50px 30px;
   transition: all 0.3s ease-in-out;
   height: 100%;
   position: relative;
   z-index: 1;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .featured-services .service-item:before {
   content: "";
   position: absolute;
-  background: var(--contrast-color);
+  background: var(--default-color);
   inset: 100% 0 0 0;
   transition: all 0.3s;
   z-index: -1;
+  border-radius: 5px;
 }
 
 .featured-services .service-item .icon {
   margin-bottom: 10px;
   display: block;
   margin: auto;
+}
+
+.featured-services .service-item:hover {
+  content: "";
+  position: absolute;
+  background: var(--default-color);
+
+  border-radius: 5px;
 }
 
 .featured-services .service-item .icon i {
@@ -1028,7 +1066,7 @@ section,
 /* texto no select */
 .featured-services .service-item p {
   line-height: 20px;
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 0;
   transition: ease-in-out 0.3s;
   color: var(--default-color);
@@ -1039,14 +1077,15 @@ section,
 .featured-services .service-item:hover h4 a,
 .featured-services .service-item:hover .icon i,
 .featured-services .service-item:hover p {
-  color: var(--default-color);
+  color: var(--background-color);
 }
 
-.featured-services .service-item:hover:before {
-  background: var(--contrast-color);
+/* .featured-services .service-item:hover:before {
+  background: var(--accent-color). transparent 90%;
   inset: 0;
-  border-radius: 20px;
-}
+  border-radius: 5px;
+  box-shadow: 0px 0 25px 0 color-mix(in srgb, var(--default-color), transparent 90%);
+} */
 
 /*--------------------------------------------------------------
 # About Section
@@ -1199,11 +1238,12 @@ section,
 }
 
 .clients .swiper {
-  padding: 10px 0;
+  padding: 10px 10px;
 }
 
 .clients .swiper-wrapper {
   height: auto;
+  padding-bottom: 20px;
 }
 
 .clients .swiper-slide img {
@@ -1221,12 +1261,13 @@ section,
   text-align: center;
   border: 1px solid color-mix(in srgb, var(--contrast-color), transparent 0%);
   background-color: var(--background-color);
-  padding: 80px 20px;
+  padding: 10px 20px;
   transition: border ease-in-out 0.3s;
   height: 100%;
   border-radius: 20px;
-  box-shadow: 0px 2px 15px color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0px 2px 15px color-mix(in srgb, var(--default-color), transparent 100%);
 }
+
 
 .services .service-item .icon {
   margin: 0 auto;
@@ -1255,7 +1296,7 @@ section,
 }
 
 .services .service-item p {
-  line-height: 24px;
+  line-height: 20px;
   font-size: 14px;
   margin-bottom: 0;
 }
@@ -1272,16 +1313,16 @@ section,
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials {
-  --default-color: #ffffff;
+  --default-color: #ededed;
   --background-color: #000000;
-  --heading-color: #ffffff;
+  --heading-color: #303A2B;
   padding: 80px 0;
   position: relative;
 }
 
 .testimonials:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 90%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1314,7 +1355,7 @@ section,
 .testimonials .testimonial-item .testimonial-img {
   width: 100px;
   border-radius: 50%;
-  border: 6px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border: 6px solid color-mix(in srgb, var(--default-color), transparent 75%);
   margin: 0 auto;
 }
 
@@ -1322,6 +1363,7 @@ section,
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0 5px 0;
+  color: color-mix(in srgb, var(--default-color), transparent 0%);
 }
 
 .testimonials .testimonial-item h4 {
@@ -1501,9 +1543,13 @@ section,
 }
 
 .team .team-member {
-  box-shadow: 0px 2px 15px color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0px 2px 15px color-mix(in srgb, var(--default-color), transparent 60%);
   overflow: hidden;
   border-radius: 5px;
+}
+
+#titulonosotros{
+  color: #303A2B;
 }
 
 .team .team-member .member-img {
@@ -1588,6 +1634,7 @@ section,
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  background: color-mix(in srgb, var(--background-color), transparent 30%);
 }
 
 .pricing .pricing-item h3 {
@@ -1596,20 +1643,22 @@ section,
   padding: 20px 15px;
   font-size: 16px;
   font-weight: 600;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  background: color-mix(in srgb, var(--default-color), transparent 95%);
+  color: color-mix(in srgb, var(--default-color), transparent 0%);
+  background: color-mix(in srgb, var(--background-color), transparent 20%);
 }
 
 .pricing .pricing-item h4 {
   font-size: 36px;
   font-weight: 600;
   font-family: var(--heading-font);
+  color: var(--default-color);
 }
 
 .pricing .pricing-item h4 sup {
   font-size: 20px;
   top: -15px;
   left: -3px;
+  color: var(--default-color);
 }
 
 .pricing .pricing-item h4 span {
@@ -1667,7 +1716,7 @@ section,
 }
 
 .pricing .featured h3 {
-  background: var(--accent-color);
+  background: color-mix(in srgb, var(--default-color), transparent 30%);
   color: var(--contrast-color);
 }
 
@@ -1683,6 +1732,7 @@ section,
   font-size: 14px;
   padding: 1px 0 3px 0;
 }
+
 
 /*--------------------------------------------------------------
 # Faq Section
@@ -1911,16 +1961,19 @@ transition: 0.3s;
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
   background: var(--default-color);
-  border: 0;
+  border: 1px;
   padding: 10px 30px;
   transition: 0.4s;
-  border-radius: 4px;
+  border-radius: 60px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
   color: var(--default-color);
   font-weight: 600;
+  border: 1px;
+  border-color: #303A2B;
+  border-radius: 60px;
 }
 
 @keyframes animate-loading {
@@ -1953,9 +2006,9 @@ transition: 0.3s;
 }
 
 .service-details .services-list a.active {
-  color: var(--heading-color);
+  color: var(--default-color);
   font-weight: 700;
-  border-color: var(--accent-color);
+  border-color: var(--default-color);
 }
 
 .service-details .services-list a:hover {
@@ -1969,11 +2022,13 @@ transition: 0.3s;
 .service-details h3 {
   font-size: 26px;
   font-weight: 700;
+  color: #303A2B;
 }
 
 .service-details h4 {
   font-size: 20px;
   font-weight: 700;
+  color: #303A2B;
 }
 
 .service-details p {
@@ -1984,6 +2039,7 @@ transition: 0.3s;
   list-style: none;
   padding: 0;
   font-size: 15px;
+  color: #303A2B;
 }
 
 .service-details ul li {
@@ -1995,8 +2051,10 @@ transition: 0.3s;
 .service-details ul i {
   font-size: 20px;
   margin-right: 8px;
-  color: var(--accent-color);
+  color: var(--default-color);
+
 }
+
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
@@ -2065,3 +2123,4 @@ transition: 0.3s;
 .starter-section {
   /* Add your styles here */
 }
+
