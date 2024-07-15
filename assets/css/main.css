@@ -486,10 +486,11 @@ h6 {
   border: 1px;
   border-color: #303A2B;
   font-size: 16px;
+  font-weight: 500;
   padding: 0 20px;
   margin: -7px -8px -7px 0;
-  background: var(--default-color);
-  color: var(--contrast-color);
+  background: #0fd2ab;
+  color: var(--default-color);
   transition: 0.3s;
   border-radius: 0 20px 20px 0;
 }
@@ -567,6 +568,12 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-right: 10px;
   transition: 0.3s;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#iconofooter{
+  margin-right: 15px;
 }
 
 .footer .social-links a:hover {
@@ -627,12 +634,12 @@ h6 {
 
 .btn-get-started2 {
   margin-top: 40px;
-  border: 2px solid #ededed;
-  color: var(--background-color);
-  border-color: var(--background-color);
-  /* background: var(--accent-color); */
+  /* border: 2px solid #ededed; */
+  color: var(--default-color);
+  /* border-color: #5448C8; */
+  background: #0fd2ab;
   font-family: var(--heading-font);
-  font-weight: 800;
+  font-weight: 900;
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
@@ -640,6 +647,7 @@ h6 {
   border-radius: 60px;
   transition: 0.5s;
   box-shadow: 0 8px 28px color-mix(in srgb, var(--accent-color), transparent 100%);
+  width: 190px;
 }
 
 .btn-get-started2:hover {
@@ -647,6 +655,7 @@ h6 {
   background: color-mix(in srgb, var(--background-color), transparent 0%);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--contrast-color), transparent 100%);
 }
+
 
 .footer .footer-contact p {
   margin-bottom: 5px;
@@ -889,7 +898,7 @@ section,
   padding: 60px 0;
   display: flex;
   align-items: center;
-  background: url("../img/Hero-final.jpeg") top left;
+  background: url("../img/Hero\ Final.jpeg") top left;
   background-position: center;
   background-size: cover;
 }
@@ -929,9 +938,9 @@ section,
 
 .hero .btn-get-started {
   /* border: 2px solid #303A2B; */
-  color: var(--background-color);
+  color: var(--default-color);
   border-color: var(--default-color);
-  background: var(--default-color);
+  background: #0fd2ab;
   font-family: var(--heading-font);
   font-weight: 800;
   font-size: 16px;
@@ -945,7 +954,7 @@ section,
 
 .hero .btn-get-started:hover {
   color: var(--default-color);
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  background: color-mix(in srgb, var(--background-color), transparent 0%);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--contrast-color), transparent 55%);
 }
 
@@ -977,10 +986,11 @@ section,
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .hero h1 {
     font-size: 28px;
     line-height: 36px;
+    bottom: 10px;
   }
 
   .hero p {
@@ -993,7 +1003,54 @@ section,
   .hero .btn-watch-video {
     font-size: 13px;
   }
+} */
+
+@media (max-width: 640px) {
+  .hero {
+    align-items: start;
+    text-align: center; /* Centra el contenido de texto */
+    background-position: right;
+    background-position: 75%;
+    background-image: url(../img/Hero\ responsive.jpg);
+    height: 620px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: -50px;
+    align-items: start;
+  }
+
+  .hero p {
+    font-size: 19px;
+    line-height: 24px;
+    margin-bottom: 23px;
+    margin-top: 15px;
+
+  }
+
+  .hero .btn-get-started {
+    color: #303A2B;
+    background: #0fd2ab;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 20px;
+    /* letter-spacing: 1px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 18px;
+    /* border-radius: 100px; */
+    transition: 0.5s;
+    box-shadow: 0 8px 28px color-mix(in srgb, var(--accent-color), transparent 90%);
+    /* border: 3.5px solid #FBF1DD; */
+    max-width: 300px; /* Ajusta este valor según tus necesidades */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+  }
+
 }
+
 
 @keyframes up-down {
   0% {
@@ -1040,6 +1097,17 @@ section,
   background: var(--default-color);
 
   border-radius: 5px;
+}
+
+
+.iconos {
+  fill: #303A2B;
+  transition: fill 0.3s ease;
+}
+
+
+#iconos:hover {
+  fill: #EDEDED
 }
 
 .featured-services .service-item .icon i {
@@ -1149,6 +1217,52 @@ section,
   font-size: 20px;
 }
 
+
+@media (max-width: 640px){
+  .about .about-content h1 {
+    font-weight: 700;
+    color: #303A2B;
+    text-align: center;
+  }
+
+  .about .about-content ul p {
+    font-size: 35px;
+    color: #EDEDED;
+    text-align: center;
+  }
+  
+  .bajadanosotros {
+    font-weight: 600;
+    text-align: center;
+  }
+
+  
+.textonosotros{
+  text-align: center;
+  }
+
+  .about .about-content ul h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #EDEDED;
+    text-align: center;
+  }
+
+  #fotocurso{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+}
+
+
+.btn-get-started2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
@@ -1233,17 +1347,19 @@ section,
 # Clients Section
 --------------------------------------------------------------*/
 .clients {
-  --background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
+  --background-color: color-mix(in srgb, var(--accent-color), transparent 0%);
   padding: 25px 0;
 }
 
 .clients .swiper {
   padding: 10px 10px;
+  background-color: #EDEDED;
 }
 
 .clients .swiper-wrapper {
   height: auto;
   padding-bottom: 20px;
+  background-color: var(--background-color);
 }
 
 .clients .swiper-slide img {
@@ -1322,7 +1438,7 @@ section,
 
 .testimonials:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 90%);
+  background: color-mix(in srgb, var(--background-color), transparent 100%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1363,13 +1479,13 @@ section,
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 0%);
+  color: color-mix(in srgb, var(--heading-color), transparent 0%);
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
   margin: 0 0 15px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--heading-color), transparent 40%);
 }
 
 .testimonials .testimonial-item .stars {
@@ -1383,7 +1499,7 @@ section,
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--heading-color), transparent 40%);
   font-size: 26px;
   line-height: 0;
 }
@@ -1405,10 +1521,12 @@ section,
 .testimonials .testimonial-item p {
   font-style: italic;
   margin: 0 auto 15px auto;
+  color: #303A2B;
 }
 
 .testimonials .swiper-wrapper {
   height: auto;
+  color: #303A2B;
 }
 
 .testimonials .swiper-pagination {
@@ -1419,12 +1537,12 @@ section,
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 50%);
+  background-color: color-mix(in srgb, var(--heading-color), transparent 50%);
   opacity: 0.5;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--default-color);
+  background-color: var(--heading-color);
   opacity: 1;
 }
 
@@ -1634,7 +1752,7 @@ section,
   border-radius: 5px;
   position: relative;
   overflow: hidden;
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background-color: var(--background-color);
 }
 
 .pricing .pricing-item h3 {
@@ -1643,26 +1761,24 @@ section,
   padding: 20px 15px;
   font-size: 16px;
   font-weight: 600;
-  color: color-mix(in srgb, var(--default-color), transparent 0%);
-  background: color-mix(in srgb, var(--background-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  background: color-mix(in srgb, var(--default-color), transparent 95%);
 }
 
 .pricing .pricing-item h4 {
   font-size: 36px;
   font-weight: 600;
   font-family: var(--heading-font);
-  color: var(--default-color);
 }
 
 .pricing .pricing-item h4 sup {
   font-size: 20px;
   top: -15px;
   left: -3px;
-  color: var(--default-color);
 }
 
 .pricing .pricing-item h4 span {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 0%);
   font-size: 16px;
   font-weight: 300;
 }
@@ -1698,11 +1814,13 @@ section,
 }
 
 .pricing .btn-buy {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: #0fd2ab;
+  color: var(--default-color);
   display: inline-block;
   padding: 8px 35px 10px 35px;
-  border-radius: 4px;
+  border: 2px;
+  border-radius: 60px;
+  border-color: var(--accent-color);
   transition: none;
   font-size: 14px;
   font-weight: 400;
@@ -1712,11 +1830,12 @@ section,
 }
 
 .pricing .btn-buy:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--default-color);
 }
 
 .pricing .featured h3 {
-  background: color-mix(in srgb, var(--default-color), transparent 30%);
+  background: var(--accent-color);
   color: var(--contrast-color);
 }
 
@@ -1837,6 +1956,8 @@ transition: 0.3s;
 .contact .info-wrap {
   box-shadow: 0px 0px 20px color-mix(in srgb, var(--default-color), transparent 90%);
   padding: 30px;
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  background-image: url(../img/Fondo\ tela.jpg);
 }
 
 @media (max-width: 575px) {
